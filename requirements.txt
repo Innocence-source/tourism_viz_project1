@@ -1,0 +1,18 @@
+# 基于Python的全国旅游业发展可视化分析系统 —— 依赖清单
+# 安装：pip install -r requirements.txt
+#
+# 环境要求：Python 3.9 及以上（开发验证环境为 Python 3.13）
+# 国内安装慢可加镜像源：
+#   pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+pandas>=1.5.0          # 数据处理核心
+numpy>=1.23.0          # 数值计算
+matplotlib>=3.6.0      # 静态图表
+seaborn>=0.12.0        # 统计可视化（回归散点、热力图）
+scikit-learn>=1.2.0    # K-Means 聚类与聚类评价指标
+pyecharts>=2.0.0       # 交互式图表 + 可视化大屏（需 2.x，本项目用 2.1.0）
+
+# 说明：
+#   1) 本项目全部数据内置/本地 csv 读取，无需联网；
+#   2) echarts.min.js 与中国地图 js 已随项目放在 assets/ 目录，离线可用；
+#   3) 若缺失地图资源，可执行 python src/build_map_asset.py 重新生成。
